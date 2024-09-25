@@ -36,5 +36,5 @@ jobs:
         vid: ${{ secrets.VERACODE_API_ID }}
         vkey: ${{ secrets.VERACODE_API_KEY }}
         file: "app/target/verademo.war" 
-        veracode_policy_name: "Vercode Recommended Low"
+        veracode_policy_name: "Veracode Recommended Medium"
         fail_build: true

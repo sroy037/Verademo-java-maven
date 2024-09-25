@@ -33,7 +33,7 @@ jobs:
       id: pipeline-scan
       uses: veracode/Veracode-pipeline-scan-action@v1.0.16
       with:
-        vid: "${{ secrets.VERACODE_API_ID }}"
+        vid: "${ secrets.VERACODE_API_ID }"
         vkey: ${{ secrets.VERACODE_API_KEY }}
         file: "app/target/verademo.war" 
         veracode_policy_name: "Test Grace Period"

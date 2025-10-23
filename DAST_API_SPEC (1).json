@@ -1,0 +1,76 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "api",
+    "description" : "OAS export of Salt Security Api Discovery",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://api.testweb.cloud"
+  } ],
+  "tags" : [ {
+    "name" : "author",
+    "description" : "Salt Security LTD"
+  }, {
+    "name" : "openApiVersion",
+    "description" : "3.0.1"
+  } ],
+  "paths" : {
+    "/addressvalidation" : {
+      "post" : {
+        "operationId" : "65d70a46eaff74c3f1137576",
+        "parameters" : [],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "required" : [ "address1", "address2", "city", "state" ],
+                "properties" : {
+                  "address1" : {
+                    "type" : "string",
+                    "example" : "abc"
+                  },
+                  "address2" : {
+                    "type" : "string",
+                    "example" : "true"
+                  },
+                  "city" : {
+                    "type" : "string",
+                    "example" : "truea"
+                  },
+                  "state" : {
+                    "type" : "string",
+                    "example" : "trueb"
+                  },
+                  "zip" : {
+                    "type" : "string",
+                    "example" : "true"
+                  },
+                  "zipCode" : {
+                    "type" : "string",
+                    "example" : "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "504" : {
+            "description" : "Gateway Timeout"
+          },
+          "503" : {
+            "description" : "Service Unavailable"
+          },
+          "502" : {
+            "description" : "Bad Gateway"
+          },
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    }
+  }
+}
